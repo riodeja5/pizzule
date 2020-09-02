@@ -1,1 +1,1 @@
-# pizzule
+This project is pizzule.
