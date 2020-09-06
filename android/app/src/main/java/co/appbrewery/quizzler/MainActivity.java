@@ -1,4 +1,4 @@
-package co.appbrewery.quizzler;
+package co.sumikitch.pizzule;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

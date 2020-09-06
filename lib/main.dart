@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:pizzule/image_page.dart';
 //Step 2 - Import the rFlutter_Alert package here.
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'quiz_brain.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
-void main() => runApp(Quizzler());
+void main() => runApp(Pizzule());
 
-class Quizzler extends StatelessWidget {
+class Pizzule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
-        body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: QuizPage(),
-          ),
+      theme: ThemeData.dark().copyWith(
+        sliderTheme: SliderTheme.of(context).copyWith(
+          activeTrackColor: Colors.white,
+          thumbColor: Color(0xFFEB1555),
+          overlayColor: Color(0x29EB1555),
+          thumbShape:
+            RoundSliderThumbShape(enabledThumbRadius: 15.0),
+          overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0)
         ),
+        primaryColor: Color(0xFF0A0D23),
+        scaffoldBackgroundColor: Color(0xFF0A0D23),
       ),
+      home: ImagePage(),
     );
   }
 }
